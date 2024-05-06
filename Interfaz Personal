@@ -1,0 +1,3 @@
+public interface PersonalRepository extends JpaRepository<Personal, Long>{
+    
+}
