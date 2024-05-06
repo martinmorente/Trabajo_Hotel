@@ -1,0 +1,60 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@Entity
+@Table (name="Ingresos_Caja")
+public class Ingreso {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idIngreso;
+ 
+	@Column(name="Impuestos_IVA")
+	private double impuesto;
+ 
+	@Column(name="Pagos_Personal")
+	private Long pagoPersonal;
+ 
+	@Column(name="Ingresos_Totales")
+	private double ingresoTotal;
+ 
+	@Column(name="Personal_idPersonal")
+	private Long idPersonal;
+        
+        public Long getidIngreso(){
+        return idIngreso;}
+        
+        public double getimpuesto(){
+        return impuesto;}
+        
+        public Long getpagoPersonal(){
+        return pagoPersonal;}
+        
+        public double getingresoTotal(){
+        return ingresoTotal;}
+        
+        public Long getidPersonal(){
+        return idPersonal;}
+        
+        public void setidIngreso (Long idIngreso){
+        this.idIngreso=idIngreso;}
+        
+        public void setimpuesto(double impuesto){
+        this.impuesto=impuesto;}
+        
+        public void setpagoPersonal(Long pagoPersonal){
+        this.pagoPersonal=pagoPersonal;}
+        
+        public void setingresoTotal(double ingresoTotal){
+        this.ingresoTotal=ingresoTotal;}
+        
+        public void setidPersonal(Long idPersonal){
+        this.idPersonal=idPersonal;}
+        
+
+}
