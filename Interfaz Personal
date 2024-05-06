@@ -1,3 +1,9 @@
-public interface PersonalRepository extends JpaRepository<Personal, Long>{
+package com.example.demo.repositories;
+
+import com.example.demo.models.Persona;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface PersonaRepository extends JpaRepository<Personal, Long> {
     
 }
