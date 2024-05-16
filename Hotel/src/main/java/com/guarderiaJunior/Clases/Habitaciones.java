@@ -26,7 +26,7 @@ public class Habitaciones {
         }
         
         public void setIdHabitacion(Long IdHabitacion){
-            this.idHabitacion =idHabitacion;
+            this.idHabitacion = IdHabitacion;
         }
         
         //Name
