@@ -10,24 +10,24 @@ import jakarta.persistence.Id;
 @Entity
 
 public class ServicioExtra {
-    private int idServicioExtra;
+    private Long idServicioExtra;
     private String nombreServicio;
     private double precioServicio;
 
     public ServicioExtra() {
     }
 
-    public ServicioExtra(int idServicioExtra, String nombreServicio, double precioServicio) {
+    public ServicioExtra(Long idServicioExtra, String nombreServicio, double precioServicio) {
         this.idServicioExtra = idServicioExtra;
         this.nombreServicio = nombreServicio;
         this.precioServicio = precioServicio;
     }
 
-    public int getIdServicioExtra() {
+    public Long getIdServicioExtra() {
         return idServicioExtra;
     }
 
-    public void setIdServicioExtra(int idServicioExtra) {
+    public void setIdServicioExtra(Long idServicioExtra) {
         this.idServicioExtra = idServicioExtra;
     }
 
