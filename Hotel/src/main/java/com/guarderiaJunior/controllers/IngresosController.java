@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api/Ingresos_Caja")
+@RequestMapping("/api/IngresosCaja")
 public class IngresosController {
         @Autowired
     private ingresosRepository ingresosRepository;

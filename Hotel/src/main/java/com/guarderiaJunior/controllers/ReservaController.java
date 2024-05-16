@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author Jose Antonio
  */
 @RestController
-@RequestMapping("/api/Clientes")
+@RequestMapping("/api/Reserva")
 public class ReservaController {
      @Autowired /*Esto nos sirve para evitar usos de punteros this nota: Se pone el repositorio en el que guardas la información*/
     private reservaRepository reservaRepository;
