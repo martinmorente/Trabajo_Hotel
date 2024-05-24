@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.guarderiaJunior.controllers;
+package com.guarderiaJunior.Hotel.controllers;
 
-import com.guarderiaJunior.Clases.IngresosCaja;
-import com.guarderiaJunior.Models.ingresosRepository;
+import com.guarderiaJunior.Hotel.Clases.IngresosCaja;
+import com.guarderiaJunior.Hotel.Models.ingresosRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,13 +44,13 @@ public class IngresosController {
         return ingresos.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
     
-    @PostMapping
+    @PostMapping/*Crear*/
     public ResponseEntity<IngresosCaja> createIngresos_Caja(@RequestBody IngresosCaja ingresos){
        IngresosCaja savedIngresos_Caja = ingresosRepository.save(ingresos);
        return ResponseEntity.status(HttpStatus.CREATED).body(savedIngresos_Caja);
     }
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}")/*Borrar*/
     public ResponseEntity<Void> deleteIngresos_Caja(@PathVariable Long id) {
         if(!ingresosRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
@@ -59,7 +59,7 @@ public class IngresosController {
         return ResponseEntity.noContent().build();
     }
     
-    @PutMapping("/{id}")
+    @PutMapping("/{id}")/*Actualizar*/
     public ResponseEntity<IngresosCaja> updateIngresos_Caja(@PathVariable Long id, @RequestBody IngresosCaja updatedIngresos_Caja) {
         if(!ingresosRepository.existsById(id)) {
             return ResponseEntity.notFound().build();

@@ -1,7 +1,7 @@
-package com.guarderiaJunior.Models;
+package com.guarderiaJunior.Hotel.Models;
 
 
-import com.guarderiaJunior.Clases.ServicioExtra;
+import com.guarderiaJunior.Hotel.Clases.ServicioExtra;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

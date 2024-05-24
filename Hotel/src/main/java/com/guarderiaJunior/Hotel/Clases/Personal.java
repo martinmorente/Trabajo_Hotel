@@ -1,5 +1,5 @@
 
-package com.guarderiaJunior.Clases;
+package com.guarderiaJunior.Hotel.Clases;
 
 
 import jakarta.persistence.Entity;

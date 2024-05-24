@@ -1,6 +1,7 @@
 
-package com.guarderiaJunior.Clases;
+package com.guarderiaJunior.Hotel.Clases;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,6 +17,8 @@ public class Habitaciones {
         
         private Long idHabitacion;
         private String name;
+        
+        @Column(name="precio")
         private double precio;
         private boolean disponibilidad;
         

@@ -1,12 +1,12 @@
 
-package com.guarderiaJunior.controllers;
+package com.guarderiaJunior.Hotel.controllers;
 
-import com.guarderiaJunior.Clases.ServicioExtra;
+import com.guarderiaJunior.Hotel.Clases.ServicioExtra;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.guarderiaJunior.Models.servicioExtraRepository;
+import com.guarderiaJunior.Hotel.Models.servicioExtraRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;

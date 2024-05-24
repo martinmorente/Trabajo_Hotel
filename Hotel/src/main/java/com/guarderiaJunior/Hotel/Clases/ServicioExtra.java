@@ -1,4 +1,4 @@
-package com.guarderiaJunior.Clases;
+package com.guarderiaJunior.Hotel.Clases;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,8 +8,10 @@ import jakarta.persistence.Id;
 
 
 @Entity
-
 public class ServicioExtra {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idServicioExtra;
     private String nombreServicio;
     private double precioServicio;
