@@ -8,14 +8,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Reservas")
+@Table(name = "reservas")
 public class Reservas {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-     public Long getId() {
+
+    public Long getId() {
         return id;
     }
 
@@ -23,5 +23,4 @@ public class Reservas {
         this.id = id;
     }
 
-    
 }

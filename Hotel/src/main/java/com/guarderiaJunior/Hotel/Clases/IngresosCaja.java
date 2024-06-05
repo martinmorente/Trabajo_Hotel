@@ -8,47 +8,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Ingresos_Caja")
+@Table(name = "ingresos_caja")
 public class IngresosCaja {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private double impuestos_IVA;
-    private int pagos_personal;
-    private double ingresos_totales;
+    private Long idingresos_caja;
+
+    private double impuestos_iva;
 
     public Long getId() {
-        return id;
+        return idingresos_caja;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idingresos_caja = id;
     }
 
     public double getImpuestos_IVA() {
-        return impuestos_IVA;
+        return impuestos_iva;
     }
 
     public void setImpuestos_IVA(double impuestos_IVA) {
-        this.impuestos_IVA = impuestos_IVA;
+        this.impuestos_iva = impuestos_IVA;
     }
-
-    public int getPagos_personal() {
-        return pagos_personal;
-    }
-
-    public void setPagos_personal(int pagos_personal) {
-        this.pagos_personal = pagos_personal;
-    }
-
-    public double getIngresos_totales() {
-        return ingresos_totales;
-    }
-
-    public void setIngresos_totales(double ingresos_totales) {
-        this.ingresos_totales = ingresos_totales;
-    }
-    
 }

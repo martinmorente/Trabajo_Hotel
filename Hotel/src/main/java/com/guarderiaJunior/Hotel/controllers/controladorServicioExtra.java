@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/Servicio")
+@RequestMapping("/api/servicio")
 
 public class controladorServicioExtra {
     
