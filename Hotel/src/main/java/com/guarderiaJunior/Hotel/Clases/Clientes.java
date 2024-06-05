@@ -8,71 +8,81 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
- @Table(name="Clientes")
+ @Table(name="clientes")
 public class Clientes {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idcliente;
 
-    private String Nombre_Cliente;
-    private String DNI_Cliente;
-    private int Cantidad_Cliente;
-    private String Fecha_Entrada;
-    private String Fecha_Salida;
+    private String nombre_cliente;
+    private String dni_cliente;
+    private int cantidad_cliente;
+    private String fecha_entrada;
+    private String fecha_salida;
 
     public Long getId() {
-        return id;
+        return idcliente;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idcliente = id;
     }
 
-    public String getNombre_Cliente() {
-        return Nombre_Cliente;
-    }
-
-    public void setNombre_Cliente(String Nombre_Cliente) {
-        this.Nombre_Cliente = Nombre_Cliente;
-    }
-
-    public String getDNI_Cliente() {
-        return DNI_Cliente;
-    }
-
-    public void setDNI_Cliente(String DNI_Cliente) {
-        this.DNI_Cliente = DNI_Cliente;
-    }
-
-    public int getCantidad_Cliente() {
-        return Cantidad_Cliente;
-    }
-
-    public void setCantidad_Cliente(int Cantidad_Cliente) {
-        this.Cantidad_Cliente = Cantidad_Cliente;
-    }
-
-    public String getFecha_Entrada() {
-        return Fecha_Entrada;
-    }
-
-    public void setFecha_Entrada(String Fecha_Entrada) {
-        this.Fecha_Entrada = Fecha_Entrada;
-    }
-
-    public String getFecha_Salida() {
-        return Fecha_Salida;
-    }
-
-    public void setFecha_Salida(String Fecha_Salida) {
-        this.Fecha_Salida = Fecha_Salida;
-    }
+ 
 
 
     @Override
     public String toString(){
-        return "Clientes{"+"id="+id+",name="+Nombre_Cliente+",dniCliente="+DNI_Cliente+",cantidadClientes="+Cantidad_Cliente+",fechaEntrada="+Fecha_Entrada+",fechaSalida"+Fecha_Salida;
+        return "Clientes{"+"id="+idcliente+",name="+nombre_cliente+",dniCliente="+dni_cliente+",cantidadClientes="+cantidad_cliente+",fechaEntrada="+fecha_entrada+",fechaSalida"+fecha_salida;
+    }
+
+    public Long getIdclientes() {
+        return idcliente;
+    }
+
+    public void setIdclientes(Long idcliente) {
+        this.idcliente = idcliente;
+    }
+
+    public String getNombre_cliente() {
+        return nombre_cliente;
+    }
+
+    public void setNombre_cliente(String nombre_cliente) {
+        this.nombre_cliente = nombre_cliente;
+    }
+
+    public String getdNI_cliente() {
+        return dni_cliente;
+    }
+
+    public void setdNI_cliente(String dNI_cliente) {
+        this.dni_cliente = dNI_cliente;
+    }
+
+    public int getCantidad_cliente() {
+        return cantidad_cliente;
+    }
+
+    public void setCantidad_cliente(int cantidad_cliente) {
+        this.cantidad_cliente = cantidad_cliente;
+    }
+
+    public String getFecha_entrada() {
+        return fecha_entrada;
+    }
+
+    public void setFecha_entrada(String fecha_entrada) {
+        this.fecha_entrada = fecha_entrada;
+    }
+
+    public String getFecha_salida() {
+        return fecha_salida;
+    }
+
+    public void setFecha_salida(String fecha_salida) {
+        this.fecha_salida = fecha_salida;
     }
     
 }
