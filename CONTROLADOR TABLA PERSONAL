@@ -1,5 +1,3 @@
-PERSONAL
-
 package com.example.demo.controllers;
 
 import com.example.demo.models.Personal;
@@ -47,7 +45,7 @@ public class PersonalController {
         if(!personalRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
-        personalRepository.deleteById(id);
+        personaRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
     
