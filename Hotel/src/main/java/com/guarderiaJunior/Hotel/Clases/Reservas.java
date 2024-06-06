@@ -13,14 +13,14 @@ public class Reservas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idreservas;
 
     public Long getId() {
-        return id;
+        return idreservas;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long idreservas) {
+        this.idreservas = idreservas;
     }
 
 }

@@ -59,4 +59,10 @@ public class Habitaciones {
         this.disponibilidad = disponibilidad;
     }
 
+
+    @Override
+    public String toString(){
+        return "Habitaciones{"+"id="+idhabitacion+",tipo habitacion="+tipohab+",precio="+precio+",disponibilidad="+disponibilidad;
+    }
+
 }

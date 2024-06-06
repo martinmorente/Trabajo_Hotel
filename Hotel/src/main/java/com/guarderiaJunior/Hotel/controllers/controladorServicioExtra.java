@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,18 +35,15 @@ public class controladorServicioExtra {
                 * en el que guardas la información
                 */
     private servicioExtraRepository servicioExtraRepository;
-
+    
+    @CrossOrigin
     @GetMapping
     public List<ServicioExtra> getAllHotels() {
         return servicioExtraRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ServicioExtra> getHotelById(@PathVariable Long id) {/*
-                                                                               * Si nosotros queremos referenciar al id
-                                                                               * que tenemos en la linea 25 tendremos
-                                                                               * que hacer anotaciones
-                                                                               */
+    public ResponseEntity<ServicioExtra> getHotelById(@PathVariable Long id) {
         Optional<ServicioExtra> servicioExtra = servicioExtraRepository.findById(id);
         return servicioExtra.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }

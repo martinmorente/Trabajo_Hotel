@@ -29,9 +29,6 @@ public class Clientes {
         this.idcliente = id;
     }
 
- 
-
-
     @Override
     public String toString(){
         return "Clientes{"+"id="+idcliente+",name="+nombre_cliente+",dniCliente="+dni_cliente+",cantidadClientes="+cantidad_cliente+",fechaEntrada="+fecha_entrada+",fechaSalida"+fecha_salida;

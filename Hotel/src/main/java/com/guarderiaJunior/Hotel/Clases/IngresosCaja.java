@@ -32,4 +32,10 @@ public class IngresosCaja {
     public void setImpuestos_IVA(double impuestos_iva) {
         this.impuestos_iva = impuestos_iva;
     }
+
+
+    @Override
+    public String toString(){
+        return "Ingresos Caja {"+"id="+idingresos_caja+",impuestos IVA="+impuestos_iva;
+    }
 }
