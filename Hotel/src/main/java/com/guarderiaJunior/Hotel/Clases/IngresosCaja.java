@@ -21,15 +21,15 @@ public class IngresosCaja {
         return idingresos_caja;
     }
 
-    public void setId(Long id) {
-        this.idingresos_caja = id;
+    public void setId(Long idingresos_caja) {
+        this.idingresos_caja = idingresos_caja;
     }
 
     public double getImpuestos_IVA() {
         return impuestos_iva;
     }
 
-    public void setImpuestos_IVA(double impuestos_IVA) {
-        this.impuestos_iva = impuestos_IVA;
+    public void setImpuestos_IVA(double impuestos_iva) {
+        this.impuestos_iva = impuestos_iva;
     }
 }

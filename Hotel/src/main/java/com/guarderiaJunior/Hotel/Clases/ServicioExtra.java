@@ -4,55 +4,57 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "servicios_extras")
 public class ServicioExtra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idServicios_extra;
+    private Long idservicios_extra;
     private String tipo;
     private double precio;
 
     public ServicioExtra() {
     }
 
-    public ServicioExtra(Long idServicioExtra, String nombreServicio, double precioServicio) {
-        this.idServicios_extra = idServicioExtra;
-        this.tipo = nombreServicio;
-        this.precio = precioServicio;
+    public ServicioExtra(Long idservicios_extra, String tipo, double precio) {
+        this.idservicios_extra = idservicios_extra;
+        this.tipo = tipo;
+        this.precio = precio;
     }
 
     public Long getIdServicioExtra() {
-        return idServicios_extra;
+        return idservicios_extra;
     }
 
-    public void setIdServicioExtra(Long idServicioExtra) {
-        this.idServicios_extra = idServicioExtra;
+    public void setIdservicio_extra(Long idservicios_extra) {
+        this.idservicios_extra = idservicios_extra;
     }
 
     public String getNombreServicio() {
         return tipo;
     }
 
-    public void setNombreServicio(String nombreServicio) {
-        this.tipo = nombreServicio;
+    public void settipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public double getPrecioServicio() {
+    public double getprecio() {
         return precio;
     }
 
-    public void setPrecioServicio(double precioServicio) {
-        this.precio = precioServicio;
+    public void setpr(double precio) {
+        this.precio = precio;
     }
 
     @Override
     public String toString() {
         return "ServicioExtra{" +
-                "idServicioExtra=" + idServicios_extra +
-                ", nombreServicio='" + tipo + '\'' +
-                ", precioServicio=" + precio +
+                "idServicios_extra=" + idservicios_extra +
+                ", tipo='" + tipo + '\'' +
+                ", precio=" + precio +
                 '}';
     }
 }

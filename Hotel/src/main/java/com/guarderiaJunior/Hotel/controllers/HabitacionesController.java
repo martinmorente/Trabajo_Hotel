@@ -4,10 +4,9 @@
  */
 package com.guarderiaJunior.Hotel.controllers;
 
-import com.guarderiaJunior.Hotel.Clases.Habitaciones;
-import com.guarderiaJunior.Hotel.Models.habitacionesRepository;
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,12 +19,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.guarderiaJunior.Hotel.Clases.Habitaciones;
+import com.guarderiaJunior.Hotel.Models.habitacionesRepository;
+
 /**
  *
  * @author Coral
  */
 @RestController
-@RequestMapping("/api/Habitaciones")
+@RequestMapping("/api/habitaciones")
 public class HabitacionesController {
 
     @Autowired
@@ -58,7 +60,8 @@ public class HabitacionesController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Habitaciones> updateHabitaciones(@PathVariable Long id, @RequestBody Habitaciones updatedHabitaciones) {
+    public ResponseEntity<Habitaciones> updateHabitaciones(@PathVariable Long id,
+            @RequestBody Habitaciones updatedHabitaciones) {
         if (!habitacionesRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }

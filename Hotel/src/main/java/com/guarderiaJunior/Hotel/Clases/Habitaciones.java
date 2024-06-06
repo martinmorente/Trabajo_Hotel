@@ -28,8 +28,8 @@ public class Habitaciones {
         return idhabitacion;
     }
 
-    public void setIdHabitacion(Long IdHabitacion) {
-        this.idhabitacion = IdHabitacion;
+    public void setIdHabitacion(Long idhabitacion) {
+        this.idhabitacion = idhabitacion;
     }
 
     // Name
@@ -37,8 +37,8 @@ public class Habitaciones {
         return tipohab;
     }
 
-    public void setName(String name) {
-        this.tipohab = name;
+    public void setName(String tipohab) {
+        this.tipohab = tipohab;
     }
 
     // Precio
